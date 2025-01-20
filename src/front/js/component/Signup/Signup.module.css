@@ -1,0 +1,99 @@
+.bgGradient {
+  background: linear-gradient(135deg, rgba(108, 99, 255, 0.8), rgba(0, 188, 212, 0.8));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+.logoContainer {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between !important; /* Espaciado entre los elementos */
+  max-width: 300px;
+}
+
+.containerLogoF {
+  background-color: rgba(0, 64, 255, 0.8);  /* Fondo gris claro y translúcido */
+  border-radius: 8px;  /* Bordes redondeados para suavizar el fondo */
+  max-width: 250px;
+  height: 50px;
+}
+/* LogoF */
+.logoF {
+  max-width: 200px; /* Ajusta el tamaño del logo */
+  height: 50px;
+  padding-left: 0.25rem;
+  padding-right:0.25rem;
+  margin-right: 10px; /* Espacio entre el logoF y logoU */
+}
+
+/* LogoU */
+.logoU {
+  max-width: 80px; /* Ajusta el tamaño del logo */
+  height: 50px;
+}
+
+
+.signUpForm {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.focus-input:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 0 0.2rem rgba(0, 188, 212, 0.25);
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate__zoomIn {
+  animation: zoomIn 1s ease-out;
+}
+
+.animate__fadeIn {
+  animation: fadeIn 1s ease-out;
+}
+
+
+/* Media Query para Pantallas de más de 1366px */
+@media (max-width: 1366px) {
+
+  .bgGradient {
+    background: linear-gradient(135deg, rgba(108, 99, 255, 0.8), rgba(0, 188, 212, 0.8));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin-top:0 !important;
+  }
+  .signUpForm {
+    padding-top: 1.5rem !important; /* Reduce el padding */
+    padding-bottom: 1.5rem !important; /* Reduce el padding */
+    margin-top: 0.0rem !important;
+  }
+  /* Contenedor del logo */
+.logoContainer {
+  margin: 0 auto;
+  margin-top: 0rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.logoF {
+  max-height: 40px !important;
+}
+.logoU {
+  max-height: 50px !important;
+}
+}

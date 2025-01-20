@@ -1,0 +1,117 @@
+/* Modal Styles */
+.modal-ingreso {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  z-index: 1000;
+}
+
+.modal-contenido-ingreso  {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.modal-titulo {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Layout para el formulario de dos columnas */
+.form-contenedor {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.left-column, .right-column {
+  width: 48%;
+}
+
+.form-field {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Específicamente para los campos Monto y Categoría */
+#accountMoney, #category {
+  width: 100%;
+}
+
+/* Alineación de los botones en la misma fila */
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Botón Registrar */
+.registrar-button {
+  padding: 10px 15px;
+  background-color: #007BFF; /* Azul */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 48%; /* Para que ocupe un poco menos de la mitad */
+}
+
+.registrar-button:hover {
+  background-color: #218838; /* Verde más oscuro */
+}
+
+/* Botón Cerrar */
+.close-button {
+  padding: 10px 15px;
+  background-color: #dc3545; /* Rojo */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 48%; /* Para que ocupe un poco menos de la mitad */
+}
+
+.close-button:hover {
+  background-color: #c82333; /* Rojo más oscuro */
+}
+
+/* Asegura que los campos de "Monto" y "Notas" tengan el mismo tamaño */
+#notas, #accountMoney {
+  width: 100%;
+}
+
+.modal-b {
+  padding: 10px 15px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-b:hover {
+  background-color: #0056b3;
+}

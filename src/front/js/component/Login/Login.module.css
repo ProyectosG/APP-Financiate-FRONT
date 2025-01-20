@@ -1,0 +1,197 @@
+/* Login.module.css */
+
+/* Fondo con gradiente */
+.bgGradient {
+  background: linear-gradient(135deg, rgba(108, 99, 255, 0.8), rgba(0, 188, 212, 0.8));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0; /* Margen superior e inferior mínimo de 2rem */
+  box-sizing: border-box;
+}
+
+/* Formulario de login */
+.loginForm {
+  width: 100%;
+  max-width: 400px; /* El máximo tamaño para el formulario */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem; /* Espaciado interno */
+  box-sizing: border-box;
+  padding-bottom: 1rem !important;
+}
+
+/* Contenedor del logo */
+.logoContainer {
+  background-color: rgba(0, 64, 255, 0.8);
+  border-radius: 8px;
+  padding: 10px;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+/* Estilo para el icono de Signup */
+.iconoSignup {
+  max-width: 100px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 50%;
+}
+
+.iconoSignup:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal Styling */
+.modal-dialog {
+  width: 100%;
+  max-width: 600px;
+}
+
+.modal-content {
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-body input,
+.modal-body select {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.modal-body .form-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.modal-footer button {
+  border-radius: 10px;
+}
+
+.modal-body .row {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.inputCapitalInicial {
+  width: 50%; /* Hace que el campo sea un 50% más pequeño */
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc; /* Borde para una apariencia más definida */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra inicial */
+  transition: box-shadow 0.3s ease, transform 0.2s ease; /* Animación suave */
+}
+
+.inputCapitalInicial:focus {
+  outline: none; /* Quita el contorno predeterminado */
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  transform: scale(1.02); /* Efecto de leve aumento */
+}
+
+.selectMoneda {
+  width: 70%; /* Ajusta el ancho según sea necesario */
+  font-size: 1.2rem; /* Tamaño de fuente uniforme */
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc; /* Borde para mantener consistencia */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra inicial */
+  transition: box-shadow 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+  padding: 0.5rem; /* Espaciado interno para mejorar el diseño */
+  appearance: none; /* Elimina el estilo nativo del navegador */
+  background: #fff; /* Fondo blanco */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath fill='%23000' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center; /* Ubicación de la flecha */
+  background-size: 10px 10px;
+  cursor: pointer; /* Indicador de clic */
+}
+
+.selectMoneda:focus {
+  outline: none; /* Quita el contorno predeterminado */
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+  transform: scale(1.02); /* Efecto de aumento */
+}
+
+
+
+/* Animación de entrada */
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate__zoomIn {
+  animation: zoomIn 1s ease-out;
+}
+
+
+
+/* Media Query para Pantallas de más de 1366px */
+@media (max-width: 1366px) {
+  .loginForm {
+    width: 70%; /* Ajusta el tamaño del formulario */
+    padding-top: 1rem !important; /* Reduce el padding */
+    padding-bottom: 0.5rem !important; /* Reduce el padding */
+    margin-top: 0.0rem !important;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  /* Contenedor del logo */
+.logoContainer {
+  max-height: 50px;
+  border-radius: 8px;
+  padding: 10px;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 0rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.logoContainer img {
+  max-height: 35px !important;
+}
+
+  .inputCapitalInicial {
+    width: 60%; /* Ajusta el tamaño del input */
+  }
+
+  .logoContainer {
+    padding: 12px; /* Ajusta el padding del logo */
+  }
+
+  .iconoSignup {
+    max-width: 90px; /* Ajusta el tamaño del icono */
+  }
+}
+
+
+/* Media Query para Pantallas Pequeñas */
+@media (max-width: 768px) {
+  .loginForm {
+    max-width: 90%; /* El formulario ocupa el 90% del ancho */
+    padding: 1.5rem; /* Reducir el padding */
+  }
+
+  .inputCapitalInicial {
+    width: 80%; /* Aumentar el tamaño del input en pantallas pequeñas */
+  }
+
+  /* Opcional: Modificar tamaño del logo */
+  .logoContainer {
+    padding: 8px;
+  }
+}

@@ -1,0 +1,9 @@
+/* 
+    General Styles used on every website (Don't Repeat Yourself)
+*/
+
+/* Asegúrate de que el html y body ocupen el 100% del alto de la ventana */
+html, body {
+    height: 100%; /* Esto garantiza que el alto de la ventana sea 100% */
+    margin: 0; /* Elimina márgenes predeterminados */
+}

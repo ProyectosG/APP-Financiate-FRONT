@@ -1,0 +1,72 @@
+/* Modal Detalles */
+.modalDetallesPlan {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  overflow: auto;
+}
+
+.modalDialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+}
+
+.modalContent {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff; /* Fondo azul */
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px 8px 0 0;
+}
+
+.modalTitle {
+  color: #fff !important;
+}
+
+/* Cambios radicales para asegurar botones del mismo tamaño */
+.modalFooter {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.modalFooter .btn {
+  width: 100%; /* Aseguramos que ambos botones tengan el mismo ancho */
+  height: 50px; /* Igual altura para los botones */
+  font-size: 1rem; /* Tamaño adecuado del texto */
+  border-radius: 0.375rem; /* Bordes redondeados */
+  padding: 0 15px; /* Espaciado interno adecuado */
+  transition: background-color 0.3s ease;
+  display: block; /* Usamos display block para ocupar todo el ancho disponible */
+}
+
+
+
+/* Efecto hover para ambos botones */
+.modalFooter .btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}

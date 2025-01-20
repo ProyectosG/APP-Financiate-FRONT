@@ -1,0 +1,88 @@
+.modalCrearPlan {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  overflow: auto; /* Permite que el modal se desplace si el contenido es muy grande */
+}
+
+.modalDialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.modalContent {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  max-height: 80%; /* Limitar la altura máxima del modal */
+  overflow-y: auto; /* Permite desplazarse si el contenido es demasiado largo */
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  color: #fff;
+}
+
+.modal-header .modal-title {
+  margin-right: 20px; /* Separar el título del botón de cerrar */
+  
+}
+.modalTitle {
+  color: #fff !important;
+}
+
+.modalFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.form-label {
+  font-size: 1.1rem;
+}
+
+/* Asegúrate de que el fondo de todos los inputs, incluyendo Flatpickr, sea blanco */
+.form-control {
+  background-color: #fff !important; /* Esto asegura que el fondo sea blanco */
+  color: #000 !important;  /* Para asegurarte que el texto sea oscuro y legible */
+  border-radius: 4px; /* Bordes redondeados como otros inputs */
+  padding: 10px; /* Espaciado interno para un mejor aspecto */
+  font-size: 1rem; /* Tamanño de fuente adecuado */
+  
+}
+
+
+
+
+
+.text-danger {
+  color: red;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.btn-danger {
+  width: 120px; /* Botón de cerrar con tamaño consistente */
+}
+
+.btn-success {
+  width: 120px; /* Botón de guardar con tamaño consistente */
+}

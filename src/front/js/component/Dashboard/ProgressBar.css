@@ -1,0 +1,108 @@
+/* Contenedor de la barra de progreso */
+.progress-bar-container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+}
+
+/* Título del plan */
+.progress-bar-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+/* Contenedor de la barra de progreso */
+.progress-bar-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+/* Porcentaje encima de la barra */
+.progress-percentage-above {
+    position: absolute;
+    top: -20px; /* Mueve el porcentaje arriba de la barra */
+    left: 50%; /* Alineación central */
+    transform: translateX(-50%); /* Asegura el centrado */
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #800080; /* Morado */
+    z-index: 2;
+}
+
+/* Estilo para los valores 0% y 100% */
+.percentage-left,
+.percentage-right {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Barra de progreso */
+.progress-bar {
+    width: 100%;
+    height: 40px;
+    background-color: #e0f7e9;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+/* Relleno de la barra de progreso */
+.progress-fill {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Texto dentro de la barra de progreso */
+.progress-value {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2px 6px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+/* Valores debajo de la barra */
+.progress-money {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Porcentaje entre el título y la barra */
+.progress-percentage-between {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #800080; /* Morado */
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Porcentaje a la izquierda y derecha */
+.percentage-left,
+.percentage-right {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+}

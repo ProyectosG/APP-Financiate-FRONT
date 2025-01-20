@@ -1,0 +1,125 @@
+.bg-custom2 {
+    background-color: #a2c9f7;
+  }
+
+/* Navbar */
+.navbar {
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+}
+
+
+.navbar-logo {
+  max-width: 180px;        
+  height: auto;            
+  object-fit: contain;     
+}
+
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilo para el enlace "Sobre nosotros" */
+.nav-link {
+  text-decoration: none;       
+  color: #007bff;
+  margin-left: 20px;              
+}
+
+.nav-link:hover {
+  color: #0056b3;               
+  text-decoration: none;        
+}
+
+/* Contenedor de los botones en el navbar */
+.ms-auto {
+  display: flex;
+  align-items: center;
+}
+
+/* botón transparente (Iniciar sesión) */
+.boton-is {
+  background-color: transparent;
+  border: 2px solid #007bff;
+  color: #007bff;
+  border-radius: 20px;
+  padding: 10px 20px;        
+  font-size: 0.9rem;          
+  white-space: nowrap;        
+  align-items: center;       
+  margin-right: 10px;        
+  transition: all 0.3s ease;  
+}
+
+.boton-is:hover {
+  background-color: #007bff;  
+  color: white;               
+  border-color: #007bff;     
+}
+
+/* botón Regístrate */
+.boton-r {
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: 20px;
+  color: white;
+  padding: 10px 20px;         
+  font-size: 0.9rem;          
+  white-space: nowrap;       
+  align-items: center;      
+}
+
+.boton-r:hover {
+  background-color: #0056b3;  
+}
+
+/* Contenido Principal de la Landing Page */
+.container {
+  margin-top: 20px;
+}
+
+/* Columna de contenido */
+.col-md-4 {
+  padding: 15px;
+}
+
+.header {
+  font-weight: bold;
+  font-size: 3rem;         
+  color: #333;              
+  line-height: 1.2;         
+  margin-bottom: 0.5rem;    
+}
+
+/* Descripción */
+p {
+  font-size: 1.50rem;
+  color: #666;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* Botón Finánciate aquí */
+button.Boton-cta {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+
+@media (min-width: 768px) {
+  .order-md-1 {
+    order: 1;
+  }
+  .order-md-0 {
+    order: 0;
+  }
+}
+
+.text-justify {
+  text-align: justify;
+}
