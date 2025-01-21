@@ -1,2 +1,1 @@
-web: npm run build && serve -s dist -l 3000
-
+web: npm run build && serve -s dist -l $PORT
