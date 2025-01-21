@@ -1,1 +1,2 @@
-web: npm run start
+web: npm run build && serve -s dist -l 3000
+
