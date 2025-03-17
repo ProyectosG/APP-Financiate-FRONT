@@ -33,8 +33,10 @@ const Signup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("_____")
+    console.log(import.meta.env.VITE_BACKEND_URL);
 
-    const response = await fetch(BACKEND_URL + "/usuarios/signup", {
+    const response = await fetch(BACKEND_URL + "/api/usuarios/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ nombre_usuario, correo, contrasena }),
