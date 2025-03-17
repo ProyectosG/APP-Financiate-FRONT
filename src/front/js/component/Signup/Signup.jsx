@@ -34,7 +34,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch(BACKEND_URL + "/api/usuarios/signup", {
+    const response = await fetch(BACKEND_URL + "/usuarios/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ nombre_usuario, correo, contrasena }),
