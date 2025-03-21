@@ -104,7 +104,6 @@ const Login = () => {
   };
 
   const handleModalSubmit = async () => {
-    console.log(store.token)
     const response = await fetch(BACKEND_URL + "/api/usuarios/config-inicial", {
       method: "PUT",
       headers: {
@@ -115,6 +114,7 @@ const Login = () => {
     });
 
     const data = await response.json();
+    console.log(data)
     if (response.ok) {
       if (isMounted.current) {
         navigate("/Home");
