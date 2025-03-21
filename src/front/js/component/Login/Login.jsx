@@ -105,7 +105,7 @@ const Login = () => {
 
   const handleModalSubmit = async () => {
     console.log(store.token)
-    const response = await fetch(BACKEND_URL + "/api/usuarios/usuarios", {
+    const response = await fetch(BACKEND_URL + "/api/usuarios/config-inicial", {
       method: "PUT",
       headers: {
         'Content-Type': 'application/json',
