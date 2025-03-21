@@ -111,7 +111,7 @@ const Login = () => {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${store.token}`,
       },
-      body: JSON.stringify({ id, correo, capital_inicial, moneda })
+      body: JSON.stringify({ correo, capital_inicial, moneda })
     });
 
     const data = await response.json();
