@@ -104,6 +104,7 @@ const Login = () => {
   };
 
   const handleModalSubmit = async () => {
+    console.log("Datos a enviar:", { correo, capital_inicial, moneda });
     const response = await fetch(BACKEND_URL + "/api/usuarios/config-inicial", {
       method: "PUT",
       headers: {
@@ -114,7 +115,6 @@ const Login = () => {
     });
 
     const data = await response.json();
-    console.log(data)
     if (response.ok) {
       if (isMounted.current) {
         navigate("/Home");
