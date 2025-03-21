@@ -81,9 +81,7 @@ const Login = () => {
     });
 
     const data = await response.json();
-    console.log(data)
-    console.log(data.usuario)
-    console.log(data.token)
+
     if (response.ok && data.token) {
       actions.setToken(data.token);
       actions.setCorreo(correo);
@@ -106,6 +104,7 @@ const Login = () => {
   };
 
   const handleModalSubmit = async () => {
+    console.log(store.token)
     const response = await fetch(BACKEND_URL + "/api/usuarios/usuarios", {
       method: "PUT",
       headers: {
