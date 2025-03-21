@@ -81,6 +81,9 @@ const Login = () => {
     });
 
     const data = await response.json();
+    console.log(data)
+    console.log(data.usuario)
+    console.log(data.token)
     if (response.ok && data.token) {
       actions.setToken(data.token);
       actions.setCorreo(correo);
