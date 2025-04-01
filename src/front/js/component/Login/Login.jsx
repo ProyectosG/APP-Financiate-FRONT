@@ -46,30 +46,30 @@ const Login = () => {
   }, []); // Se ejecuta solo una vez cuando el componente se monta
 
   useEffect(() => {
-    const fetchCategorias = async () => {
-      try {
-        const response = await fetch(`${BACKEND_URL}/api/categorias/default`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        });
+    // const fetchCategorias = async () => {
+    //   try {
+    //     const response = await fetch(`${BACKEND_URL}/api/categorias/default`, {
+    //       method: 'POST',
+    //       headers: {
+    //         'Content-Type': 'application/json',
+    //       },
+    //     });
 
-        if (!response.ok) {
-          const errorText = await response.text();
-          throw new Error('Error al obtener las categorías');
-        }
+    //     if (!response.ok) {
+    //       const errorText = await response.text();
+    //       throw new Error('Error al obtener las categorías');
+    //     }
 
-        const result = await response.json();
-      } catch (error) {
-        console.error('Error:', error.message);
-        if (error.message.includes("Token")) {
-          actions.logout();
-        }
-      }
-    };
+    //     const result = await response.json();
+    //   } catch (error) {
+    //     console.error('Error:', error.message);
+    //     if (error.message.includes("Token")) {
+    //       actions.logout();
+    //     }
+    //   }
+    // };
 
-    fetchCategorias();
+    // fetchCategorias();
   }, []);
 
   const handleSubmit = async (e) => {
@@ -115,7 +115,7 @@ const Login = () => {
     });
 
     const data = await response.json();
-    console.log(data)
+  
     if (response.ok) {
       if (isMounted.current) {
         navigate("/Home");
