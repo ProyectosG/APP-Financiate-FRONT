@@ -40,7 +40,7 @@ const Categorias = () => {
         setCategorias(result);
       } catch (error) {
         console.error('Error:', error.message);
-      }f
+      }
     };
     fetchCategorias();
   }, [refreshCategories]);
