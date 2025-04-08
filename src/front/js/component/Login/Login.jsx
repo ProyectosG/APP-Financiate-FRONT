@@ -61,7 +61,6 @@ const Login = () => {
          }
 
          const result = await response.json();
-         console.log("RESULT ES IGUAL A EN EL FRONT...",result)
        } catch (error) {
          console.error('Error:', error.message);
          if (error.message.includes("Token")) {
@@ -82,7 +81,7 @@ const Login = () => {
     });
 
     const data = await response.json();
-    console.log(data)
+
 
     if (response.ok && data.token) {
       actions.setToken(data.token);
@@ -106,14 +105,18 @@ const Login = () => {
   };
 
   const handleModalSubmit = async () => {
-    console.log("Datos a enviar:", { correo, capital_inicial, moneda });
+    let floatCapital_Inicial = parseFloat(capital_inicial);
     const response = await fetch(BACKEND_URL + "/api/usuarios/config-inicial", {
       method: "PUT",
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${store.token}`,
       },
-      body: JSON.stringify({ correo, capital_inicial: parseFloat(capital_inicial), moneda })
+      body: JSON.stringify({
+        capital_inicial: floatCapital_Inicial,
+        moneda
+      })
+      
 
     });
 
