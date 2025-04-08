@@ -82,6 +82,7 @@ const Login = () => {
     });
 
     const data = await response.json();
+    console.log(data)
 
     if (response.ok && data.token) {
       actions.setToken(data.token);
@@ -117,7 +118,7 @@ const Login = () => {
     });
 
     const data = await response.json();
-    console.log("en liniea 118 de front  donde esta esto  await response.json(); me sale esto",data)
+    console.log("en liniea 121 de front  en await response.json(); me sale esto",data)
   
     if (response.ok) {
       if (isMounted.current) {
