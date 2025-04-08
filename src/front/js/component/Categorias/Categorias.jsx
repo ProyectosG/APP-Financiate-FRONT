@@ -30,7 +30,11 @@ const Categorias = () => {
           },
         });
         
-        if (!response.ok) throw new Error('Error al obtener las categorías');
+        if (!response.ok) {
+          const errorData = await response.json();  // Captura el cuerpo del error
+          throw new Error(`Error al obtener las categorías: ${errorData.msg || response.statusText}`);
+        }
+
         const result = await response.json();
         console.log(result)
         setCategorias(result);
