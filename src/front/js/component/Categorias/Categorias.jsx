@@ -32,10 +32,11 @@ const Categorias = () => {
         
         if (!response.ok) throw new Error('Error al obtener las categorías');
         const result = await response.json();
+        console.log(result)
         setCategorias(result);
       } catch (error) {
         console.error('Error:', error.message);
-      }
+      }f
     };
     fetchCategorias();
   }, [refreshCategories]);
