@@ -15,7 +15,7 @@ const Fondo = () => {
     useEffect(() => {
         const obtenerFondo = async () => {
             try {
-                const respuesta = await fetch(`${BACKEND_URL}/api/fondos_emergencia/fondos_emergencia/activo`, {
+                const respuesta = await fetch(`${BACKEND_URL}/api/fondos_emergencia/activo`, {
                     method: "GET",
                     headers: {
                         "Authorization": `Bearer ${localStorage.getItem("tokenFinanciaE")}`,
@@ -51,7 +51,7 @@ const Fondo = () => {
         }
 
         try {
-            const respuesta = await fetch(`${BACKEND_URL}/api/fondos_emergencia/fondos_emergencia`, {
+            const respuesta = await fetch(`${BACKEND_URL}/api/fondos_emergencia`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -104,7 +104,7 @@ const Fondo = () => {
 
         if (confirmacion.isConfirmed) {
             try {
-                const respuesta = await fetch(`${BACKEND_URL}/api/fondos_emergencia/fondos_emergencia`, {
+                const respuesta = await fetch(`${BACKEND_URL}/api/fondos_emergencia`, {
                     method: "DELETE",
                     headers: {
                         "Content-Type": "application/json",

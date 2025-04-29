@@ -28,7 +28,7 @@ const Dashboard = () => {
         useEffect(() => {
             const fetchFondoEmergenciaActivo = async () => {
                 try {
-                    const response = await fetch(`${BACKEND_URL}/api/fondos_emergencia/fondos_emergencia/activo`, {
+                    const response = await fetch(`${BACKEND_URL}/api/fondos_emergencia/activo`, {
                         headers: {
                             'Content-Type': 'application/json',
                             'Authorization': `Bearer ${store.token}`,
