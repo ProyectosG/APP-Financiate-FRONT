@@ -57,7 +57,7 @@ function Ingresos() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { accountMoney, notas, category, date } = ingreso;
-
+    console.log(BACKEND_URL)
     try {
       const response = await fetch(`${BACKEND_URL}/api/ingresos`, {
         method: "POST",
@@ -69,7 +69,6 @@ function Ingresos() {
           monto: accountMoney,
           descripcion: notas,
           fecha: date,
-          usuario_id: store.usuario_id,
           categoria_id: category,
         }),
       });
