@@ -59,7 +59,7 @@ function Ingresos() {
     const { accountMoney, notas, category, date } = ingreso;
     console.log(BACKEND_URL)
     try {
-      const response = await fetch(`${BACKEND_URL}/api/ingresos`, {
+      const response = await fetch(`${BACKEND_URL}/api/ingresos/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
