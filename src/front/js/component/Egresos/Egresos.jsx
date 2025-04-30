@@ -57,7 +57,7 @@ function Egresos() {
     const usuario_id = store.usuario_id;
 
     try {
-      const response = await fetch(`${BACKEND_URL}/api/egresos/agrega_egreso`, {
+      const response = await fetch(`${BACKEND_URL}/api/egresos/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
