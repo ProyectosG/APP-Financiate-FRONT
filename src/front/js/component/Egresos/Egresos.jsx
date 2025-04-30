@@ -67,7 +67,6 @@ function Egresos() {
           monto: amount,
           descripcion: description,
           fecha,
-          usuario_id,
           categoria_id: category,
         }),
       });
