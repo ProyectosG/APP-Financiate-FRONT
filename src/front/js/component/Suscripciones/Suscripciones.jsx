@@ -23,7 +23,7 @@ function Suscripciones() {
     // Obtener todas las suscripciones
     const fetchSubscriptions = async () => {
         try {
-            const response = await fetch(`${BACKEND_URL}/api/suscripciones/suscripcion`, {
+            const response = await fetch(`${BACKEND_URL}/api/suscripcion/`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ function Suscripciones() {
         e.preventDefault();
 
         try {
-            const response = await fetch(`${BACKEND_URL}/api/suscripciones/suscripcion`, {
+            const response = await fetch(`${BACKEND_URL}/api/suscripcion/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -105,7 +105,7 @@ function Suscripciones() {
 
         if (result.isConfirmed) {
             try {
-                const response = await fetch(`${BACKEND_URL}/api/suscripciones/suscripcion`, {
+                const response = await fetch(`${BACKEND_URL}/api/suscripcion/`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json',
@@ -144,7 +144,7 @@ function Suscripciones() {
 
         if (result.isConfirmed) {
             try {
-                const response = await fetch(`${BACKEND_URL}/api/suscripciones/suscripcion/pagar`, {
+                const response = await fetch(`${BACKEND_URL}/api/suscripcion/pagar`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
