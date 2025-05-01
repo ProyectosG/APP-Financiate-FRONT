@@ -144,7 +144,7 @@ function Suscripciones() {
 
         if (result.isConfirmed) {
             try {
-                const response = await fetch(`${BACKEND_URL}/api/suscripcion/pagar`, {
+                const response = await fetch(`${BACKEND_URL}/api/suscripcion/pagos`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
