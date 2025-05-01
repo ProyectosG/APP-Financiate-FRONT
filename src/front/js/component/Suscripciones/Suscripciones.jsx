@@ -129,6 +129,7 @@ function Suscripciones() {
         }
     };
 
+    
     // Registrar el pago de una suscripción como egreso
     const handleMarkAsPaid = async (subscription) => {
         const result = await Swal.fire({
